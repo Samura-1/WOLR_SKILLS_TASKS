@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74BAAA28-67F3-4E51-8330-0AF96A655DD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CompanyNine</RootNamespace>
+    <AssemblyName>Восьмерка</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Восьмерка.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddNewProduct.xaml.cs">
+      <DependentUpon>AddNewProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Agent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentPriorityHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Editavgcost.xaml.cs">
+      <DependentUpon>Editavgcost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialCountHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="materials_short_k_import.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCostHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMaterial.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Page Include="AddNewProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editavgcost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Восьмерка.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Восьмерка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Resource Include="products\tire_0.jpg" />
+    <Resource Include="products\tire_1.jpg" />
+    <Resource Include="products\tire_10.jpg" />
+    <Resource Include="products\tire_11.jpg" />
+    <Resource Include="products\tire_12.jpg" />
+    <Resource Include="products\tire_13.jpg" />
+    <Resource Include="products\tire_14.jpg" />
+    <Resource Include="products\tire_15.jpg" />
+    <Resource Include="products\tire_16.jpg" />
+    <Resource Include="products\tire_17.jpg" />
+    <Resource Include="products\tire_18.jpg" />
+    <Resource Include="products\tire_19.jpg" />
+    <Resource Include="products\tire_2.jpg" />
+    <Resource Include="products\tire_20.jpg" />
+    <Resource Include="products\tire_21.jpg" />
+    <Resource Include="products\tire_22.jpg" />
+    <Resource Include="products\tire_23.jpg" />
+    <Resource Include="products\tire_24.jpg" />
+    <Resource Include="products\tire_25.jpg" />
+    <Resource Include="products\tire_26.jpg" />
+    <Resource Include="products\tire_27.jpg" />
+    <Resource Include="products\tire_28.jpg" />
+    <Resource Include="products\tire_29.jpg" />
+    <Resource Include="products\tire_3.jpg" />
+    <Resource Include="products\tire_30.jpg" />
+    <Resource Include="products\tire_31.jpg" />
+    <Resource Include="products\tire_32.jpg" />
+    <Resource Include="products\tire_33.jpg" />
+    <Resource Include="products\tire_34.jpg" />
+    <Resource Include="products\tire_35.jpg" />
+    <Resource Include="products\tire_36.jpg" />
+    <Resource Include="products\tire_37.jpg" />
+    <Resource Include="products\tire_38.jpg" />
+    <Resource Include="products\tire_39.jpg" />
+    <Resource Include="products\tire_4.jpg" />
+    <Resource Include="products\tire_40.jpg" />
+    <Resource Include="products\tire_41.jpg" />
+    <Resource Include="products\tire_42.jpg" />
+    <Resource Include="products\tire_43.jpg" />
+    <Resource Include="products\tire_44.jpg" />
+    <Resource Include="products\tire_45.jpg" />
+    <Resource Include="products\tire_46.jpg" />
+    <Resource Include="products\tire_47.jpg" />
+    <Resource Include="products\tire_48.jpg" />
+    <Resource Include="products\tire_49.jpg" />
+    <Resource Include="products\tire_5.jpg" />
+    <Resource Include="products\tire_50.jpg" />
+    <Resource Include="products\tire_51.jpg" />
+    <Resource Include="products\tire_52.jpg" />
+    <Resource Include="products\tire_53.jpg" />
+    <Resource Include="products\tire_54.jpg" />
+    <Resource Include="products\tire_55.jpg" />
+    <Resource Include="products\tire_56.jpg" />
+    <Resource Include="products\tire_57.jpg" />
+    <Resource Include="products\tire_58.jpg" />
+    <Resource Include="products\tire_59.jpg" />
+    <Resource Include="products\tire_6.jpg" />
+    <Resource Include="products\tire_60.jpg" />
+    <Resource Include="products\tire_61.jpg" />
+    <Resource Include="products\tire_62.jpg" />
+    <Resource Include="products\tire_63.jpg" />
+    <Resource Include="products\tire_64.jpg" />
+    <Resource Include="products\tire_7.jpg" />
+    <Resource Include="products\tire_8.jpg" />
+    <Resource Include="products\tire_9.jpg" />
+    <Resource Include="Resources\tire_48.jpg" />
+    <Resource Include="Resources\tire_47.jpg" />
+    <Resource Include="Resources\tire_46.jpg" />
+    <Resource Include="Resources\tire_45.jpg" />
+    <Resource Include="Resources\tire_44.jpg" />
+    <Resource Include="Resources\tire_43.jpg" />
+    <Resource Include="Resources\tire_42.jpg" />
+    <Resource Include="Resources\tire_41.jpg" />
+    <Resource Include="Resources\tire_40.jpg" />
+    <Resource Include="Resources\tire_39.jpg" />
+    <Resource Include="Resources\tire_38.jpg" />
+    <Resource Include="Resources\tire_37.jpg" />
+    <Resource Include="Resources\tire_36.jpg" />
+    <Resource Include="Resources\tire_35.jpg" />
+    <Resource Include="Resources\tire_34.jpg" />
+    <Resource Include="Resources\tire_33.jpg" />
+    <Resource Include="Resources\tire_32.jpg" />
+    <Resource Include="Resources\tire_31.jpg" />
+    <Resource Include="Resources\tire_30.jpg" />
+    <Resource Include="Resources\tire_29.jpg" />
+    <Resource Include="Resources\tire_28.jpg" />
+    <Resource Include="Resources\tire_27.jpg" />
+    <Resource Include="Resources\tire_26.jpg" />
+    <Resource Include="Resources\tire_25.jpg" />
+    <Resource Include="Resources\tire_24.jpg" />
+    <Resource Include="Resources\tire_23.jpg" />
+    <Resource Include="Resources\tire_22.jpg" />
+    <Resource Include="Resources\tire_21.jpg" />
+    <Resource Include="Resources\tire_20.jpg" />
+    <Resource Include="Resources\tire_19.jpg" />
+    <Resource Include="Resources\tire_18.jpg" />
+    <Resource Include="Resources\tire_17.jpg" />
+    <Resource Include="Resources\tire_16.jpg" />
+    <Resource Include="Resources\tire_15.jpg" />
+    <Resource Include="Resources\tire_14.jpg" />
+    <Resource Include="Resources\tire_13.jpg" />
+    <Resource Include="Resources\tire_12.jpg" />
+    <Resource Include="Resources\tire_11.jpg" />
+    <Resource Include="Resources\tire_10.jpg" />
+    <Resource Include="Resources\tire_9.jpg" />
+    <Resource Include="Resources\tire_8.jpg" />
+    <Resource Include="Resources\tire_7.jpg" />
+    <Resource Include="Resources\tire_6.jpg" />
+    <Resource Include="Resources\tire_5.jpg" />
+    <Resource Include="Resources\tire_4.jpg" />
+    <Resource Include="Resources\tire_3.jpg" />
+    <Resource Include="Resources\tire_2.jpg" />
+    <Resource Include="Resources\tire_1.jpg" />
+    <Resource Include="Resources\tire_0.jpg" />
+    <Resource Include="Resources\tire_64.jpg" />
+    <Resource Include="Resources\tire_63.jpg" />
+    <Resource Include="Resources\tire_62.jpg" />
+    <Resource Include="Resources\tire_61.jpg" />
+    <Resource Include="Resources\tire_60.jpg" />
+    <Resource Include="Resources\tire_59.jpg" />
+    <Resource Include="Resources\tire_58.jpg" />
+    <Resource Include="Resources\tire_57.jpg" />
+    <Resource Include="Resources\tire_56.jpg" />
+    <Resource Include="Resources\tire_55.jpg" />
+    <Resource Include="Resources\tire_54.jpg" />
+    <Resource Include="Resources\tire_53.jpg" />
+    <Resource Include="Resources\tire_52.jpg" />
+    <Resource Include="Resources\tire_51.jpg" />
+    <Resource Include="Resources\tire_50.jpg" />
+    <Resource Include="Resources\tire_49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
